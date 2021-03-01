@@ -1,3 +1,58 @@
-/* body coloring
-/* header shading
-/* forecast shading
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+
+}
+
+
+body {
+    background-color: lightgray;
+    font-size: 16px;
+    font-family: "Poppins", sans-serif;
+
+}
+
+.header {
+    background-color: #0833f1;
+    color: white;
+    padding-top: 40px;
+    font-family: "Poppins", sans-serif;
+
+}
+
+h3 {
+    font-weight: 100;
+    font-size: 25px;
+    color: #252525;
+}
+
+.city-search {
+    background-color: rgba(1, 21, 2, 0.138);
+    padding: 15px;
+}
+
+.forecast {
+    font-family: "Poppins", sans-serif;
+    font-size: 0.9em;
+    background-color: #0833f1;
+    color: white;
+
+}
+
+.btn {
+    color: white;
+    background-color: #0833f1;
+}
+
+span {
+    font-size: 1.2em;
+}
+
+li:hover {
+    background-color: lightslategray;
+    text-decoration: underline;
+}
