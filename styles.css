@@ -48,6 +48,18 @@ h3 {
     background-color: #0833f1;
 }
 
+.fiveday {
+    padding: 5px;
+    font-size: 18px;
+    text-align: center;
+
+}
+
+.fiveday h3 {
+    font-size: 25px;
+    color: #252525;
+}
+
 span {
     font-size: 1.2em;
 }

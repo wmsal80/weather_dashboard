@@ -90,7 +90,30 @@ function uvIndex(ln, lt) {
         $(uvIndexS).html(response.value);
     })
 }
-// future spot for forecast
+function forecast(cityid) {
+    let dayover = false;
+    let queryForecastURL = "https://api.openweathermap.org/data/2.5/forecast?id=" + cityid + "&appid=" + apiKey;
+    // ajax call 
+    $.ajax({
+        url: queryForecastURL,
+        method: "GET",
+    }).then(function (response) {
+        for (i = 0; i < 5; i++) {
+            let date = new Date((response.list[((i + 1) * 8) - 1].dt) * 1000).toLocaleDateString();
+            var iconCode = response.list[((i + 1) * 8) - 1].weather[0].icon;
+            var iconUrl = "https://openweathermap.org/img/wn/" + iconCode + ".png";
+            var tempK = response.list[((i + 1) * 8) - 1].main.temp;
+            var tempFar = (Math.floor((tempK - 273.5) * 1.80) + 32) + "&#176;";
+            var humidity = response.list[((i + 1) * 8) - 1].main.humidity;
+
+            // html add - to elements 
+            $("#fDate" + i).html(date);
+            $("#fImg" + i).html("<img src=" + iconUrl + ">");
+            $("#fTemp" + i).html(tempFar);
+            $("#fHumidity" + i).html(humidity + "%");
+        }
+    })
+}
 
 // add cities to list 
 function addToList(c) {
