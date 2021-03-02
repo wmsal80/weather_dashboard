@@ -1,1 +1,2 @@
 This is a simple weather dashboard for planning future travels or just because not knowing the weather drives you insane.
+You will need to click the search icon as I did not link the "enter/return" button to it.
